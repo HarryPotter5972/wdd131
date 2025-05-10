@@ -1,0 +1,44 @@
+:root {
+    background-color: blue;
+    border: 5px solid white;
+    color: white;
+}
+nav {
+    background-color: orange;
+    color: blue;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+nav a:hover {
+    border: 1px solid #fff;
+}
+nav ul li {
+    flex: 1 1 auto;
+}
+main {
+    display: flex;
+    
+}
+h2 {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.card {
+    background-color: blue;
+    color: white;
+    flex: 2 auto;
+    border: 5px solid orange;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+}
+.card img {
+    float: right;
+    border: 4px solid white;;
+}
+p {
+    border: 5px solid transparent;
+}
