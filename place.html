@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Country Page</title>
+        <meta name="description" content="Country assignment page">
+        <meta name="author" content="Brandon Baggaley">
+        <link rel="stylesheet" href="styles/place.css">
+        <link rel="stylesheet" href="styles/place-large.css">
+        <script src="scripts/place.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>The United States of America</h1>
+        </header>
+        <main>
+            <img src="images/americanflag.webp" class="smallImage" id="smallImage" alt="The American flag">
+            <img src="images/americanflaglarge.webp" alt="American Flag with bald eagle" id="largeImage" class="largeImage show">
+            <div class="data">
+                <h2>Data</h2>
+                <p><b>Area:</b> 3.81 million sq mi</p>
+                <p><b>Population:</b> 340.1 million</p>
+                <p><b>Capital:</b> Washington D.C.</p>
+                <p><b>Currency:</b> U.S. dollar</p>
+                <p><b>Time Zones:</b> UTC-4, UTC-5, UTC-6, UTC-7, UTC-8, UTC-10</p>
+                <p><b>Calling Code:</b> +1</p>
+                <p><b>Internet TLD:</b> .us</p>
+            </div>
+            <div class="weather">
+                <h2>Weather in Riverton, Utah  <img src="images/sunnyemoticon.webp" alt="Sunny day emoticon" class="sunny"></h2>
+                <p><b>Temperature:</b> <span id="temperature"></span></p>
+                <p><b>Conditions:</b> <span id="conditions"></span></p>
+                <p><b>Wind Speed:</b> <span id="windSpeed"></span></p>
+                <p><b>Wind Chill:</b> <span id="windChill"></span></p>
+            </div>
+        </main>
+        <footer>
+            <p>©️<span id="currentyear"></span> | Brandon Baggaley | Riverton, UT USA</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
