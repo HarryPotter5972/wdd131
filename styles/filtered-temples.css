@@ -1,0 +1,106 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: blue;
+    border: 5px solid white;
+    color: white;
+}
+header {
+    background-color: orange;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0 0 30px white;
+}
+header, main, footer {
+    max-width: 480px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 3rem;
+    color: blue;
+}
+h2 {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#hamburgerMenu {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    background-color: blue;
+    color: white;
+}
+#hamburgerMenu::before{
+    content: "Hamburger Menu";
+    font-style: "Times New Roman", "Times", serif;
+}
+nav {
+    background-color: darkblue;
+
+}
+.navbar {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.navbar li {
+    display: none;
+}
+.navbar a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: .5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+.navbar a:hover, .navbar a:active {
+    text-decoration: underline double;
+    background-color: white;
+    color: black;
+}
+.show li {
+    display: block;
+}
+#hamburgerMenu.show::before {
+    content: "X";
+}
+.connected {
+    color: red;
+}
+img {
+   height: 250px;
+   width: 400px;
+   padding: 5px;
+}
+figure {
+    display: grid;
+    justify-content: center;
+    border: 1px solid white;
+    padding: 5px;
+}
+h3 {
+    text-align: center;
+}
+.res-grid {
+    display: grid;
+
+}
+section {
+    border-bottom: 3px solid white;
+    padding: 5px;
+}
+
