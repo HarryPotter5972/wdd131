@@ -2,14 +2,18 @@ const currentyear = document.querySelector("#currentyear");
 let lastModified = document.querySelector("#lastModified");
 const hamButton = document.querySelector("#hamburgerMenu");
 const navbar = document.querySelector(".navbar");
-
+const oldTemplesLink = document.querySelector("#oldTemples");
+const newTemples = document.querySelector("#newTemples");
+const largeTemples = document.querySelector("#largeTemples");
+const smallTemples = document.querySelector("#smallTemples");
+const all = document.querySelector("#all");
 
 
 currentyear.innerHTML = new Date().getFullYear();
 lastModified.innerHTML = new Date(document.lastModified);
 hamButton.addEventListener("click", () => {
-    navbar.classList.toggle("show");
-    hamButton.classList.toggle("show");
+  navbar.classList.toggle("show");
+  hamButton.classList.toggle("show");
 });
 
 const temples = [
@@ -119,61 +123,65 @@ const temples = [
   // Add more temple objects here...
 ];
 
+
 createTempleGridArea(temples);
 
-const oldTemples = document.querySelector("#oldTemples");
 
-oldTemples.addEventListener("click", () => {
-    
-    let templesOld = temples.filter(temple => temple.dateDedicated.getFullYear() <= 1899)
-    createTempleGridArea(templesOld);
-    
+
+oldTemplesLink.addEventListener("click", (event) => {
+  event.preventDefault();
+  let templesOld = temples.filter(temple => temple.dateDedicated.getFullYear() <= 1899);
+  console.log(templesOld);
+  createTempleGridArea(templesOld);
 });
-;
 
 function createTempleGridArea(filteredTemples) {
-    document.querySelector(".res-grid").innerHTML = "";
-    filteredTemples.forEach(temple => {
-        let gridSection = document.createElement("section");
-        let name = document.createElement("h3");
-        let location = document.createElement("p");
-        let dedication = document.createElement("p");
-        let area = document.createElement("p");
-        let img = document.createElement("img");
+  document.querySelector(".res-grid").innerHTML = "";
+  filteredTemples.forEach(temple => {
+    let gridSection = document.createElement("section");
+    let name = document.createElement("h3");
+    let location = document.createElement("p");
+    let dedication = document.createElement("p");
+    let area = document.createElement("p");
+    let img = document.createElement("img");
 
-        name.textContent = temple.templeName;
-        location.innerHTML = `<span class="category">Location:</span> ${temple.location}`;
-        dedication.innerHTML = `<span class="category">Dedicated:</span> ${temple.dedicated}`;
-        area.innerHTML = `<span class="category">Area:</span> ${temple.area} sq ft`;
-        img.setAttribute("src", temple.imageUrl);
-        img.setAttribute("alt", `${temple.templeName} Temple`);
-        img.setAttribute("loading", "lazy");
+    name.textContent = temple.templeName;
+    location.innerHTML = `<span class="category">Location:</span> ${temple.location}`;
+    dedication.innerHTML = `<span class="category">Dedicated:</span> ${temple.dedicated}`;
+    area.innerHTML = `<span class="category">Area:</span> ${temple.area} sq ft`;
+    img.setAttribute("src", temple.imageUrl);
+    img.setAttribute("alt", `${temple.templeName} Temple`);
+    img.setAttribute("loading", "lazy");
         
-        gridSection.appendChild(name);
-        gridSection.appendChild(location);
-        gridSection.appendChild(dedication);
-        gridSection.appendChild(area);
-        gridSection.appendChild(img);
+    gridSection.appendChild(name);
+    gridSection.appendChild(location);
+    gridSection.appendChild(dedication);
+    gridSection.appendChild(area);
+    gridSection.appendChild(img);
 
-        document.querySelector(".res-grid").appendChild(gridSection);
-
-
+    document.querySelector(".res-grid").appendChild(gridSection);
     });
 };
-;
 
 
-const newTemples = document.querySelector("#newTemples");
-newTemples.addEventListener("click", () => {
-    createTempleGridArea(temples.filter(temple => temple.dateDedicated.getFullYear() > 2000));
-});
-const largeTemples = document.querySelector("#largeTemples");
-largeTemples.addEventListener("click", () => {
-    createTempleGridArea(temples.filter(temple => temple.area > 90000));
-});
-const smallTemples = document.querySelector("#smallTemples");
-smallTemples.addEventListener("click", () => {
-    createTempleGridArea(temples.filter(temple => temple.area < 10000));
+
+
+newTemples.addEventListener("click", (event) => {
+  event.preventDefault();
+  createTempleGridArea(temples.filter(temple => temple.dateDedicated.getFullYear() >= 2001));
 });
 
+largeTemples.addEventListener("click", (event) => {
+  event.preventDefault();
+  createTempleGridArea(temples.filter(temple => temple.area > 90000));
+});
 
+smallTemples.addEventListener("click", (event) => {
+  event.preventDefault();
+  createTempleGridArea(temples.filter(temple => temple.area < 10000));
+});
+
+all.addEventListener("click", (event) => {
+  event.preventDefault();
+  createTempleGridArea(temples);
+});
