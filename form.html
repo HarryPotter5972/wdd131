@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale=1.0">
+        <title>Web Form</title>
+        <meta name="description" content="HTML Form learning activity">
+        <meta name="author" content="Brandon Baggaley">
+        <link rel="stylesheet" href="styles/form-small.css">
+        <link rel="stylesheet" href="styles/filtered-temples-large.css">
+        <script src="scripts/form.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Product Review</h1>
+        </header>
+        <main>
+            <h2>Product Review Form</h2>
+            <form method="get" action="review.html" class="reviewForm">
+                <fieldset>
+                    <label for="">Product Name: 
+                        <select name="product" class="deLorean" required>
+                            <option value="">Choose a Product</option>
+                        </select>
+                    </label>
+                    <div>Overall Rating:*</div>
+                    <label for=""><input type="radio" name="rating" value="one star"> One Star</label>
+                    <label for=""><input type="radio" name="rating" value="two stars"> Two Stars</label>
+                    <label for=""><input type="radio" name="rating" value="three stars"> Three Stars</label>
+                    <label for=""><input type="radio" name="rating" value="four stars"> Four Stars</label>
+                    <label for=""><input type="radio" name="rating" value="five stars"> Five Stars</label>
+
+                    <div>Format of Purchase:*</div>
+                    <label for=""><input type="radio" name="format" value="digital"> Digital</label>
+                    <label for=""><input type="radio" name="format" value="physical"> Physical</label>
+
+                    <label for="">Date of Installation or Purchase: <input type="date" name="installed"></label>
+                    <div>What features did you find most enjoyable in the game?</div>
+                    <label for=""><input type="checkbox" name="feature" value="art style"> Art Style</label>
+                    <label for=""><input type="checkbox" name="feature" value="gameplay"> Gameplay</label>
+                    <label for=""><input type="checkbox" name="feature" value="graphics"> Graphics</label>
+                    <label for=""><input type="checkbox" name="feature" value="story"> Story (if applicable)</label>
+
+                    <label for="">Detailed Review: <input type="text" name="review" required></label>
+                    <label for="">Name: <input type="text" name="name" required></label>
+                    <input type="submit" value="Post Review" class="result">
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <p>©️<span id="currentyear"></span> | Brandon Baggaley | Riverton, UT USA</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>

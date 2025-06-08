@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    font-family: 16px;
+    background-color: blue;
+    color: red;
+}
+header {
+    padding: .5rem 2%;
+    background-color: red;
+    color: blue;
+}
+header h1 {
+    margin: 0;
+}
+.reviewForm fieldset {
+    margin: 2rem 0;
+    border: 1px solid white;
+    background-color: green;
+    color: gold;
+}
+.reviewForm label {
+    display: block;
+    padding-top: 1rem;
+}
+.reviewForm div {
+    padding-top: 1rem;
+    font-size: .9rem;
+}
+.reviewForm input[type="text"], .reviewForm input[type="date"], .reviewForm select {
+    display: block;
+    border: solid 1px gold;
+    border-radius: 6px;
+    padding: .75rem;
+    color: red;
+    width: 100%;
+    max-width: 400px;
+}
+.reviewForm input[type="submit"]{
+    border: 2px solid red;
+    background-image: linear-gradient(gold, green);
+    color: red;
+    border-radius: 6px;
+    padding: .75rem;
+    width: 96%;
+}
+.reviewForm input:required{
+    border-left: solid 8px red;
+}
+.reviewForm input:valid {
+    border-left: solid 8px lightgreen;
+}
