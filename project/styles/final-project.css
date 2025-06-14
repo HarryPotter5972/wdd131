@@ -1,0 +1,24 @@
+:root {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    background-color: green;
+    color: red;
+}
+header {
+    background-color: red;
+    color: gold;
+}
+h1 {
+    padding: 5px;
+}
+header nav {
+    background-color: blue;
+}
+header nav ul {
+    list-style: none;
+}
+.dragon {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
