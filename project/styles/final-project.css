@@ -2,23 +2,89 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.1rem;
     background-color: green;
-    color: red;
+    color: gold;
 }
 header {
     background-color: red;
     color: gold;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid gold;
+    box-shadow: 0 0 30px red;
+}
+header, main, footer {
+    max-width: 480px;
+    margin: 0 auto;
 }
 h1 {
     padding: 5px;
 }
-header nav {
+nav {
     background-color: blue;
 }
-header nav ul {
+.navbar {
     list-style: none;
+    display: flex;
+    flex-direction: column;
 }
+
 .dragon {
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+.unifiedTimeline section , .singleTimeline section, .botwTotk section {
+    border-bottom: 5px solid red;
+}
+.split {
+    list-style: none;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+}
+.split a {
+    background-color: blue;
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: gold;
+    font-weight: 500;
+    transition: .5s;
+    font-size: 20px;
+}
+.split a:hover, .split a:active, .navbar a:hover, .navbar a:active {
+    text-decoration: underline double;
+    background-color: white;
+    color: black;
+}
+.allSplits {
+    display: none;
+}
+.allSplits section {
+    border-bottom: 3px solid red;
+    padding: 5px;
+}
+#all {
+    display: none
+}
+section {
+    display: flex;
+    padding: 10px;
+}
+img {
+    border: 5px solid gold;
+    padding: 5px;
+}
+.navbar a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    font-weight: 400;
+    transition: .6s;
+}
+h1, h2 {
+    text-align: center;
 }

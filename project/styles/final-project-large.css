@@ -1,0 +1,42 @@
+@media screen and (min-width:480px) {
+    header, main, footer {
+        max-width: 2000px;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #all {
+        display: block;
+    }
+    .split {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    .split li, .navbar li {
+        display: flex;
+        flex: 1 1 100%;
+    }
+    .split a, .navbar a {
+        text-align: center;
+    }
+    .navbar {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .allSplits {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .allSplits section {
+        display: block;
+    }
+    .singleTimeline {
+        grid-template-columns: 1fr;
+    }
+    .singleTimeline section {
+        display: flex;
+    }
+}
